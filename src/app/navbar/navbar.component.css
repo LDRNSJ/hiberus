@@ -1,0 +1,14 @@
+.rightAligment {
+  flex: 1 1 auto;
+  text-align: end;
+}
+
+.squareFix {
+  max-width: 10%;
+  box-sizing: content-box;
+}
+
+.hiberus {
+    text-decoration: none;
+    color: #ffffff;
+  }

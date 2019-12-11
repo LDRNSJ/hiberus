@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  version: 'localhost 0.1',
+  production: false,
+  baseHiberus: 'http://51.38.51.187:3333/api/v1'
 };
 
 /*

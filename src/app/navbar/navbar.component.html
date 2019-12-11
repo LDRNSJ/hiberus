@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="app-header">
+  <mat-toolbar-row>
+    <span class="hiberus" >Hiberus Test</span>
+    <a mat-button *ngIf="!isAuth()" routerLink="login" routerLinkActive="active">Ingresar</a>
+    <a mat-button *ngIf="!isAuth()" routerLink="register" routerLinkActive="active">Registrar</a>
+    <span *ngIf="isAuth()" class="rightAligment">
+      <i class="material-icons">
+        perm_identity </i
+      >{{ username }}</span
+    >
+    <a mat-button class="rightAligment squareFix" *ngIf="isAuth()" (click)="logOut()" routerLinkActive="active">Cerrar sesion <i class="material-icons">
+        cancel
+        </i></a>
+  </mat-toolbar-row>
+</mat-toolbar>

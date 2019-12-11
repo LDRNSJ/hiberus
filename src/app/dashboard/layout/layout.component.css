@@ -1,0 +1,19 @@
+tfoot input {
+  width: 100%;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+tfoot {
+  display: table-header-group;
+}
+
+td {
+  vertical-align: middle !important;
+}
+
+.formMat {
+  
+  width: 100%;
+  padding-left: 2em;
+}

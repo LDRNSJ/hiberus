@@ -1,0 +1,42 @@
+<body>
+  <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Registrar</mat-card-title>
+      </mat-card-header>
+
+      <form class="example-form" name="form" (ngSubmit)="f.form.valid && submit()" #f="ngForm" novalidate>
+        <mat-card-content>
+          <mat-form-field class="example-full-width form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+            <input
+              matInput
+              placeholder="Usuario"
+              class="form-control"
+              name="username"
+              [(ngModel)]="loginData.username"
+              #username="ngModel"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+            <input
+              matInput
+              placeholder="Contraseña"
+              class="form-control"
+              name="password"
+              type="password"
+              [(ngModel)]="loginData.password"
+              #password="ngModel"
+              required
+            />
+          </mat-form-field>
+        </mat-card-content>
+        <div *ngIf="error" type="danger">{{ error }}</div>
+        <div class="form-group">
+          <button mat-stroked-button color="accent" class="btn-block">Registrar</button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</body>
