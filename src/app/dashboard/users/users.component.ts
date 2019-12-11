@@ -10,11 +10,11 @@ import { AuthService } from 'src/app/_services/auth.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.css']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.css']
 })
-export class LayoutComponent implements OnInit {
+export class UsersComponent implements OnInit {
   sort = ['ASC', 'DESC'];
   type = ['_id', 'username'];
   users: Users[];
@@ -116,7 +116,7 @@ export class LayoutComponent implements OnInit {
         this.initTable(this);
       },
       no => {
-        this.toaster.error(`Error inesperado. Intente nuevamente.`);
+        this.toaster.error(`Intente nuevamente.`, `Error inesperado`);
       }
     );
   }
@@ -124,11 +124,11 @@ export class LayoutComponent implements OnInit {
   deleteUser(id: string) {
     this.process.deleteUsers(id).subscribe(
       success => {
-        this.toaster.success(``, `Eliminado Satistactoriamente.`);
+        this.toaster.success(``, `Eliminado Satisfactoriamente.`);
         this.getUser();
       },
       error => {
-        this.toaster.success(`Error inesperado. Intente nuevamente.`, `Error`);
+        this.toaster.success(`Intente nuevamente.`, `Error inesperado`);
       }
     );
   }

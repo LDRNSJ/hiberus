@@ -1,6 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout/layout.component';
+import { UsersComponent } from './users/users.component';
 
 import { AuthGuardService } from '../_services/auth-guard.service';
 import { dashboardRoutes } from './dashboard.routes';
@@ -13,7 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(dashboardRoutes), MaterialModule, FormsModule, ReactiveFormsModule],
   providers: [AuthGuardService, { provide: MAT_RADIO_DEFAULT_OPTIONS, useValue: { color: 'primary' } }],
-  declarations: [LayoutComponent],
+  declarations: [UsersComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DashboardModule {}
